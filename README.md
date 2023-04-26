@@ -151,4 +151,4 @@ Se possível:<br>
 ------------
 
 <h2>📌 Me segue no Linkedin: </h2>
-[GiovannaMorais](https://www.linkedin.com/in/giovanna-gomes-alves-de-morais/ "GiovannaMorais").
+[Giovanna Morais](https://www.linkedin.com/in/giovanna-gomes-alves-de-morais/).
