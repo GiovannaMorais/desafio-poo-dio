@@ -1,6 +1,8 @@
 import java.time.LocalDate;
 
+import br.com.dio.desafio.dominio.Bootcamp;
 import br.com.dio.desafio.dominio.Curso;
+import br.com.dio.desafio.dominio.Dev;
 import br.com.dio.desafio.dominio.Mentoria;
 
 public class Main {
@@ -21,8 +23,48 @@ public class Main {
         mentoria.setDescricao("descrição mentoria java");
         mentoria.setData(LocalDate.now());
         
-        System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria);
+        // System.out.println(curso1);
+        // System.out.println(curso2);
+        // System.out.println(mentoria);
+
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição Bootcamp Java Developer");
+        bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+
+        Dev devGiovanna = new Dev();
+        devGiovanna.setNome("Giovanna");
+        devGiovanna.inscreverBootcamp(bootcamp);
+
+
+        System.out.println("Conteúdos Incritos Giovanna " + devGiovanna.getCouteudosInscritos());
+        devGiovanna.progredir();
+        devGiovanna.progredir();
+        System.out.println("-------------");
+
+        System.out.println("Conteúdos Incritos Giovanna " + devGiovanna.getCouteudosInscritos());
+        System.out.println("Conteúdos Concluídos Giovanna " + devGiovanna.getConteudosConcluidos());
+        System.out.println("XP: " + devGiovanna.calcularTotalXp());
+
+
+        Dev devJoao = new Dev();
+        devJoao.setNome("Joao");
+        devJoao.inscreverBootcamp(bootcamp);
+
+
+        System.out.println("Conteúdos Incritos João " + devJoao.getCouteudosInscritos());
+        devJoao.progredir();
+        devJoao.progredir();
+        devJoao.progredir();
+        System.out.println("-------------");
+
+        System.out.println("Conteúdos Incritos Giovanna " + devJoao.getCouteudosInscritos());
+        System.out.println("Conteúdos Concluídos João " + devJoao.getConteudosConcluidos());
+        System.out.println("XP: " + devJoao.calcularTotalXp());
+
+        
     }
 }
